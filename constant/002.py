@@ -1,6 +1,4 @@
 # 002-Encyclopedia
-import re
-
 
 N = int(input())
 
@@ -26,3 +24,13 @@ if int(N%2) == 0:
                 else:
                     a+="("
             print(a)
+
+
+# N: characters
+for i in range(pow(2,N)):
+    # i is 0000... ~ 1111...
+    for j in range(N):
+        if (i>>j) & 1:
+            pass # when jth character is 1
+        else:
+            pass
