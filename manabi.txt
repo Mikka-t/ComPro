@@ -9,8 +9,40 @@ gcd 最大公約数
 
 明らかに2の倍数を2で割り算してWAでも/を//にしたら通るかも？
 
-https://github.com/tatyam-prime/SortedSet/blob/main/SortedSet.py
+	https://github.com/tatyam-prime/SortedSet/blob/main/SortedSet.py
 バケツソートしてくれるSortedSet
 
 
 pythonは再帰が速い　それ以外原因ならpypyが速いかも
+
+	
+imos法：範囲に足して最大値を求めるなど		とあるアルゴリズム解説
+						https://hackmd.io/@AymkShhZRFeX98HUU2MuHQ/Hk3hLVlWz?type=view
+
+累積和： a1,a2...を0,a1,a1+a2...として記録
+
+二部探索(bisect)：　ソートされた配列に対して、探す値が大きいか小さいかで探索　だいたい真ん中から初めて再帰
+
+bit全探索(bit_search)
+
+ダイクストラ法：　始状態からいけるとこのうち最小コストのものを一つずつ決定する(頂点数-1だけ繰り返す)
+	グラフの表現：	隣接行列：　　n*n行列のうち0と1で辺があるか表す。自分に向いたやつないなら対角成分0。
+			隣接リスト：　不定長nリストを含むリスト、i番目のリストの要素は頂点iが隣接する点の番号。
+			有向なら片方だけに入れて、重み付きなら10進数を使うか3次元行列(各要素が[番号、重み])
+
+ﾜｰシャルフロイド法(Warshall_Floyd)：　すべての組み合わせで最短経路(重み付隣接行列を使う、繋がってないのはINFとする)
+
+DFS,BFS 幅深さ
+
+UnionFind ユニ木：　同じグループかどうかを判定するための木、まとめる(二頂点間に辺を張る)のはできるが分割無理、距離も無理
+
+メモ化再帰：　再帰関数でf(5),f(4),...と求めるとf(3)が何回も計算される！→メモリを犠牲にして辞書に各結果を記録しちゃう
+
+DP：	n個のうち重さの総和がWを越えない時の価値の総和の最大値、など	https://qiita.com/drken/items/a5e6fe22863b7992efdb
+	漸化式：	dp[i+1][w] = max(dp[i][w-weight[i]] + value[i], dp[i][w]) 	dp[i+1]：i番目までの品物のなかから重さW以下で選んだ時の価値の総和の最大値
+
+
+調べたい
+modint
+BIT
+最大流、最小費用流
