@@ -1,29 +1,29 @@
 -(-A//B) # 切り上げ
 
-bit演算(bit全探索)：少ないメモリで固定長の2値の文を全探索 (と)の順番など？
-
 itertoolsが効率的な計算するライブラリ、順列や組み合わせなど
-
-スニペット便利
-gcd 最大公約数
 
 明らかに2の倍数を2で割り算してWAでも/を//にしたら通るかも？
 
-	https://github.com/tatyam-prime/SortedSet/blob/main/SortedSet.py
-バケツソートしてくれるSortedSet
-
-
 pythonは再帰が速い　それ以外原因ならpypyが速いかも
 
+二次元リストをソートしたら各小リストの0番目要素でソートされる
+
+
+
+＜アルゴリズム＞
+
+gcd 最大公約数
 	
 imos法：範囲に足して最大値を求めるなど		とあるアルゴリズム解説
 						https://hackmd.io/@AymkShhZRFeX98HUU2MuHQ/Hk3hLVlWz?type=view
+
+バケツソートしてくれるSortedSet			https://github.com/tatyam-prime/SortedSet/blob/main/SortedSet.py
 
 累積和： a1,a2...を0,a1,a1+a2...として記録
 
 二部探索(bisect)：　ソートされた配列に対して、探す値が大きいか小さいかで探索　だいたい真ん中から初めて再帰
 
-bit全探索(bit_search)
+bit全探索(bit_search)：	少ないメモリで固定長の2値の文を全探索 (と)の順番など？
 
 ダイクストラ法：　始状態からいけるとこのうち最小コストのものを一つずつ決定する(頂点数-1だけ繰り返す)
 	グラフの表現：	隣接行列：　　n*n行列のうち0と1で辺があるか表す。自分に向いたやつないなら対角成分0。
