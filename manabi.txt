@@ -40,9 +40,14 @@ UnionFind ユニ木：　同じグループかどうかを判定するための�
 
 DP：	n個のうち重さの総和がWを越えない時の価値の総和の最大値、など	https://qiita.com/drken/items/a5e6fe22863b7992efdb
 	漸化式：	dp[i+1][w] = max(dp[i][w-weight[i]] + value[i], dp[i][w]) 	dp[i+1]：i番目までの品物のなかから重さW以下で選んだ時の価値の総和の最大値
+	i個めまでの状態での解と、選んだもののインデックスがあれば、i+1個めまでの状態での解もわかる
 
 
 調べたい
 modint
 BIT
 最大流、最小費用流
+
+使えるようになりたい
+Segment Tree
+グラフのもんだい　
